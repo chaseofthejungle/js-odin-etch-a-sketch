@@ -1,1 +1,1 @@
-# odin-etch-a-sketch
+# A simple etch-a-sketch inspired program, developed for The Odin Project.

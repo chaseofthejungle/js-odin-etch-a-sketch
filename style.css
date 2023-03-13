@@ -1,0 +1,212 @@
+/* 3 values selected for contrast with elements. */
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+  
+html {
+    min-height: 100%;
+    position: relative;
+}
+  
+body {
+    line-height: 2.5;
+    margin-bottom: 100px;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+  
+h1 {
+    line-height: 1.2;
+    background-color: rgb(126, 126, 255);
+    color: #000;
+}
+  
+button, input {
+    width: 100%;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+  
+/* Header */
+.header {
+    padding: 30px 0;
+}
+  
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+  
+/* Main/Settings Area */
+.main {
+    gap: 100px;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.settings {
+    gap: 30px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+button {
+    background: var(--primary-light);
+    padding: 10px 20px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 10px;
+}
+
+#rainbowBtn {
+    background: linear-gradient(45deg, red, yellow, blue, violet);
+}
+
+button.active {
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+}
+  
+button, input[type='color'] {
+    transition: transform 0.1s ease-out;
+}
+  
+button:hover, input[type='color']:hover {
+    transform: scale(1.1);
+}
+  
+input[type='color']:active {
+    transition: transform 0.05s ease-out;
+}
+  
+input[type='color'] {
+    -webkit-appearance: none;
+    height: 100px;
+    width: 100px;
+    border: none;
+}
+  
+input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+  
+input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px;
+}
+  
+.size-value {
+    margin-bottom: -20px;
+    font-size: 22px;
+}
+  
+input[type='range'] {
+    -webkit-appearance: none;
+    background-color: var(--primary-light);
+}
+  
+input[type='range']::-webkit-slider-runnable-track {
+    background: var(--secondary-light);
+    height: 10px;
+    border: 1px solid var(--primary-dark);
+    border-radius: 25px;
+}
+  
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: var(--primary-dark);
+    width: 18px;
+    height: 24px;
+    border-radius: 25px;
+    margin-top: -8px;
+}
+  
+/* Grid Area */
+.grid-element {
+    user-select: none;
+}
+
+.grid {
+    background-color: var(--secondary-light);
+    display: grid;
+    width: 550px;
+    height: 550px;
+    margin: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 5px;
+}
+
+/* Footer */  
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+/* Responsive/Reflexive Design */
+@media (max-width: 1200px) {
+    .main {
+      justify-content: center;
+    }
+}
+  
+@media (max-width: 850px) {
+    .main {
+      gap: 50px;
+    }
+  
+    .settings {
+      width: 150px;
+      gap: 16px;
+    }
+  
+    .size-value {
+      margin-bottom: -4px;
+    }
+  
+    .grid {
+      width: 400px;
+      height: 400px;
+    }
+}
+  
+@media (max-width: 650px) {
+    .title {
+      font-size: 50px;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .grid {
+      width: 300px;
+      height: 300px;
+    }
+
+}
