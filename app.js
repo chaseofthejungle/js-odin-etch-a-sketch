@@ -44,8 +44,8 @@ sizeSlider.onmousemove = (e) => updateSizeValue(e.target.value);
 sizeSlider.onchange = (e) => changeSize(e.target.value);
 
 let mouseDown = false;
-document.body.addEventLister = ("mousedown"), () => (mouseDown = true);
-document.body.addEventLister = ("mouseup"), () => (mouseDown = false);
+document.body.onmousedown = () => (mouseDown = true);
+document.body.onmouseup = () => (mouseDown = false);
 
 // Grid Update Logic
 function changeSize(value) {
