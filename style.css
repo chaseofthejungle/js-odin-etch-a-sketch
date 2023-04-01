@@ -25,9 +25,9 @@ body {
 }
   
 h1 {
-    background: rgb(126, 126, 255);
-    line-height: 1.2;
-    color: #000;
+    background: linear-gradient(blue, steelblue);
+    line-height: 1.7;
+    color: rgb(255, 255, 255);
 }
   
 button, input {
@@ -78,6 +78,12 @@ button {
 
 #rainbowBtn {
     background: linear-gradient(45deg, red, yellow, blue, violet);
+    color: rgb(255, 255, 255);
+}
+
+#eraserBtn {
+    background: tomato;
+    color: rgb(255, 255, 255);    
 }
 
 button.active {
