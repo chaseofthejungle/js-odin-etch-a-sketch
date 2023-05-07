@@ -1,5 +1,5 @@
-# A simple etch-a-sketch inspired program, developed for The Odin Project.
+# Odin Project Etch-a-Sketch App
 
-Designed for Google Chrome desktop environments. Also highly compatible in Edge.
+A simple etch-a-sketch inspired program, developed for The Odin Project. Designed for Google Chrome desktop environments, but also highly compatible in Edge.
 
 Live Demo: http://chaseofthejungle.github.io/odin-etch-a-sketch
